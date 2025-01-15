@@ -1,0 +1,99 @@
+/* Jeremy Calhoun
+WEB115-N801 Fall 24 */
+
+fieldset{
+    max-width: 80ch;
+    margin: auto;
+    display: block;
+    margin-bottom: 1ch;
+    box-sizing: border-box;
+	border: 3px solid #aaa;
+}
+
+#middle-initial{
+    max-width: 3ch;
+}
+
+#divisor1, #divisor2, #divisor3, #count-limit {
+    max-width: 6ch;
+}
+
+input{
+    max-width: 17ch;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+label{
+    margin: 1ch .5ch 1ch 1ch;
+}
+
+/* 2nd fieldset sections */
+.left{
+    float: left;
+    width: 35ch;
+    margin: 1ch 0 1ch 10%;
+    padding: 0;
+}
+
+.right{
+    float:right;
+    width: 23ch;
+    margin: 1ch 10% 1ch 0;
+    padding: 0;
+}
+
+/* buttons */
+button {
+    height: 4ch;
+	width: 11ch;
+	color: #2f2f5d;
+	font-weight: bolder;
+	background-color: #77eefd;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap:3ch;
+    clear: both;
+    margin: 2.5ch auto auto;
+}
+
+button:hover {
+	background-color: #2f2f5d;
+	color: #c5ffff;
+	border: 2px solid #77eefd;
+}
+
+/* output styling */
+#output2 {
+	list-style-type: none;
+	padding: 2ch 1.5ch 0;
+	max-width: 800px;
+	margin: auto;
+	color: #c5ffff;
+}
+
+@media only screen and (max-width: 105ch) {
+    .right, .left{
+        width: 15ch;
+    }
+    .name{
+        width: 15ch;
+    }
+    input, #middle-initial, #divisor1, #divisor2, #divisor3, #count-limit{
+        max-width: 95%;
+    }
+    fieldset{
+        max-width: 75%;
+        margin: auto;
+    }
+    
+}
+
+@media only screen and (max-width: 75ch) {
+    fieldset{
+        max-width: 100%;
+    }
+}

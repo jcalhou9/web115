@@ -1,0 +1,196 @@
+<!-- Jeremy Calhoun -->
+<!-- WEB110-N851 -->
+<!-- Project Part 1 & 2-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- set meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- link CSS files -->
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="stylesheet" type="text/css" href="formatting.css">
+	<script src="timeClock.js" defer></script>
+	
+    <title>Morning Brew</title>
+</head>
+<body> <!-- many sectioning and grouing elements -->
+   <header>
+		<h1><i>Morning Brew</i></h1> <!--text level element-->
+		<!-- nav list with hypertext -->
+		<nav>
+			<ul>
+				<li><a href="./Index.html">Home Page</a></li>
+				<li><a href="./AboutUs.html">About Us</a></li>
+				<li><a href="./Menu.html">Menu</a></li>
+				<li class="contact"><a href="./ContactUs.html">Contact Us</a></li>
+			</ul>
+		</nav>	
+	</header>
+	
+	<h2>Contact Us</h2>
+	<!-- Create and format a form with multiple field sets -->
+	
+	<article>
+		<h3>Current time and date</h3>
+		<p id="dateNow"></p>
+	</article>
+	
+	<article>
+		<h3>Time until Christmas!</h3>
+		<p id="countdown"></p>
+		    <p><span id="days">8</span> Days 
+            <span id="hrs">8</span> Hours </p>
+            <p><span id="mins">8</span> Minutes 
+            <span id="secs">8</span> Seconds </p>
+	</article>
+	
+	<article>
+		<form action="submissionSupplier.html" method="POST">
+		<!-- inline character references -->
+				<h3>&#8226; Coffee supplier form &#8226;</h3>
+			<!-- text -->
+			<!-- Validate data with by having certain fields required -->
+			<section class="formRow">
+				<label for="contact_name">Contact Name</label><br>
+				<input type="text" name="contact_name" id="contact_name" required >
+			</section>
+			<!-- text -->
+			<section class="formRow">
+				<label for="company_name">Company Name</label><br>
+				<input type="text" name="contact_name" id="contact_name" required >
+			</section>
+			<!-- Include a datalist and use it for input -->
+			<section>
+			<label for="state">Company State</label><br>
+				<input type="text" name="company state" id="state" list="state name" required >
+				<datalist id="state name">
+					<option value="North Carolina">
+					<option value="South Carolina">
+					<option value="Tennessee">
+					<option value="Virginia">
+					<option value="Georgia">
+			</section>
+			<!-- Include at least one input that is set for a mobile keyboard type -->
+			<section>
+				<label for="email">Contact Email:</label><br>
+				<input type="email" id="email" placeholder="email@email.com" size="30" required />
+			</section>
+			<!-- Include at least one input that is set for a mobile keyboard type -->
+			<section class="formRow">
+				<label for="contact_number">Contact Number(include dashes)</label><br>
+				<!-- Validate data with patterns and field lengths -->
+				<input type="tell" name="contact_name" id="contact_name" placeholder="555-555-5555"
+				pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+			</section>
+			<!-- check boxes -->
+			<section class="formRow">
+				<span> What roast can you provide?</span><br>
+				<input type="checkbox" name="roast" id="light roast" value="light roast">
+				<label for="light roast">Light roast</label>
+				<input type="checkbox" name="roast" id="medium roast" value="medium roast">
+				<label for="medium roast">Medium roast</label>
+				<input type="checkbox" name="roast" id="dark roast" value="dark roast">
+				<label for="dark roast">Dark roast</label
+			</section>
+			<!-- date/time -->
+			<section>
+				<label for="delivery date">When would be the earliest delivery?</label><br>
+				<input type="datetime-local" id="delivery date" name="delivery date"
+				value="select date/time" min="2024-04-20T00:00" required >
+			</section>
+			<!-- Create and format a text area -->
+			<section class="formRow"><br>
+				<label for="extra">Anything else you want to add?</label><br>
+				<textarea id="extra" name="extra" placeholder="Other comments or
+				information" rows="5" cols="30"></textarea>
+			</section>
+			<!-- Create a submit and cancel/reset button -->
+			<section>
+				<input value="Clear Form" type="reset">
+				<input value="Submit Form" type="Submit">
+			</section>
+		</form>
+	</article>
+		
+	
+	<article>
+		<form action="submissionCustomer.html" method="POST">
+					<h3>&#8226; Coffee bean order form &#8226;</h3>
+			<!-- text -->
+			<!-- Validate data with by having certain fields required -->
+			<section class="formRow">
+				<label for="contact_name">First and Last Name</label><br>
+				<input type="text" name="contact_name" id="contact_name" required >
+			</section>
+			<!-- Include at least one input that is set for a mobile keyboard type -->
+			<section>
+				<label for="email">Contact Email:</label><br>
+				<input type="email" id="email" placeholder="email@email.com" 
+				pattern=".+@example\.com" size="30" required />
+			</section>
+			<!-- Include at least one input that is set for a mobile keyboard type -->
+			<!-- Validate data with patterns and field lengths -->
+			<section class="formRow">
+				<label for="contact_number">Contact Number(include dashes)</label><br>
+				<input type="tel" name="contact_name" id="contact_name" placeholder="555-555-5555"
+				pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+			</section>
+			<!-- range sliders -->
+			<section class="formRow">
+				<label for="roast">What type of roast would you like?</label><br>
+				<span>Light</span>
+				<input type="range" name="roast" id="roast" value="1" min="1" max="3">
+				<span>Dark</span>
+			</section>
+			<!-- spinners -->
+			<section class="formRow">
+				<label for="bags"> How many 12oz bags? </label><br>
+				<span>1-10 bags</span>
+				<input id="bags" name="bags" type="number" min="1" max="10" step="1" required >
+			</section>
+			<!-- radio buttons -->
+			<section class="formRow">
+			  <label for="auto_delivery">Would you like to have a coffee subscription?</label><br>
+			  <input type="radio" name="auto_delivery" id="yes" value="yes">
+			  <label for="yes">Yes</label>
+			  <input type="radio" name="auto_delivery" id="no" value="yes">
+			  <label for="no">No</label>	
+			</section>
+			<!-- spinners -->
+			<section class="formRow">			
+				<label for="weeks">How often do you want a delivery?</label><br>
+				<span>0-12 weeks</span>
+				<input id="weeks" name="weeks" type="number" min="0" max="12" step="1" required >
+			</section>
+			<!-- Create a selection list -->
+			<section class="formRow">
+				<label for="reference">Where did you hear about us?</label><br>
+				<select name="reference" id="reference">
+					<option value="" selected disabled hidden>Select one</option>
+					<option value="friend family">Friend or Family</option>
+					<option value="social media">Social Media</option>
+					<option value="passed by">Passed By</option>
+					<option value="other">Other</option>
+				</select>
+				<!-- Create a submit and cancel/reset button --> 
+			<section>
+					<input value="Clear Form" type="reset">
+					<input value="Submit Form" type="Submit">
+			</section>
+		</form>
+	</article>
+	
+	<footer>
+		<nav>
+			<ul>
+				<li><a href="./Index.html">Home Page</a></li>
+				<li><a href="./AboutUs.html">About Us</a></li>
+				<li><a href="./Menu.html">Menu</a></li>
+				<li class="contact"><a href="./ContactUs.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+</html>

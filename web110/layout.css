@@ -1,0 +1,58 @@
+/* Jeremy Calhoun */
+/* WEB110-N851 */
+/* Project Part 1 & 2*/
+
+/* formatting for grid */
+.coffeeshop, .menu {
+	grid-column: 2 / span 1;
+	max-width: 100%;
+	margin:auto;
+}
+
+.latte, .machine {
+	grid-column: 2 / span 1;
+	max-width: 60%;
+	margin:auto;
+}
+
+/* create float layout */
+.latte {
+	float:right;
+	max-height: 435px;
+}
+
+.machine {
+	float:left;
+	max-height: 435px;
+}
+
+section {
+	margin: 1ch 0ch;
+}
+
+header {
+	border-radius: 30px;
+	grid-column: 1 / span 3;
+}
+
+article {
+	grid-column: 2 / span 1;
+	border-radius: 30px;
+	margin:auto;
+	padding: 1.5ch;
+	color: white;
+	background-color: #2a1d0ff0;
+	box-shadow:0 0 10px 5px #e4e0c1
+}
+
+footer {
+	grid-column: 1 / span 3;
+	border-radius: 30px;
+}
+
+.menu, .homepage, .about, .contact {
+	background-color:#e4e0c1;
+	padding: .2ch;
+	border-radius: 30px;
+	font-weight: bolder;
+}
